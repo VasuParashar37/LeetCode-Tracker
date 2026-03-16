@@ -1,73 +1,66 @@
-# Welcome to your Lovable project
+# LeetCode Tracker
 
-## Project info
+Track solved LeetCode problems, revision cadence, and question history with a React frontend and Supabase backend.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Live app: https://leet-code-tracker-green.vercel.app
 
-## How can I edit this code?
+## Tech Stack
 
-There are several ways of editing your application.
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui
+- Supabase Auth
+- Supabase Postgres
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- Email sign up and sign in
+- Password reset flow
+- Save solved questions to Supabase
+- Track revision count and next revision date
+- Persist question activity history
+- Search across saved questions
 
-Changes made via Lovable will be committed automatically to this repo.
+## Local Development
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+1. Install dependencies:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Create a `.env.local` file:
 
-# Step 3: Install the necessary dependencies.
-npm i
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_publishable_key
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the dev server:
+
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+```
 
-**Use GitHub Codespaces**
+## Supabase Setup
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+You need:
 
-## What technologies are used for this project?
+- a `questions` table
+- a `question_history` table
+- Supabase Auth enabled
+- redirect URLs configured for local and production environments
 
-This project is built with:
+SQL for `question_history` is available in [supabase/question_history.sql](/Users/vasuparashar03/Documents/LeetCode%20Tracker/supabase/question_history.sql).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Production URL
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- https://leet-code-tracker-green.vercel.app
